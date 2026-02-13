@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kelvin Maina - FULLSTACK Developer & Designer</title>
+    
+    <!-- SEO Meta (Already Perfect) -->
+    <meta name="keywords" content="Kelvin Maina, FULLSTACK Developer, React, Tailwind CSS, Nairobi Kenya">
+    <meta name="author" content="Kelvin Maina">
+    <meta property="og:title" content="Kelvin Maina - FULLSTACK Developer">
+    <meta property="og:description" content="Pixel-perfect web experiences">
+    <meta name="theme-color" content="#00df9a">
+    <meta name="description" content="Kelvin Maina - FULLSTACK Developer & Designer creating pixel-perfect web experiences">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    
+    <link rel="preload" href="style.css" as="style">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 🔥 PROGRESS BAR -->
+    <div class="progress-bar" id="progress"></div>
+    
+    <!-- Theme Toggle -->
+    <button class="mode-toggle" aria-label="Toggle theme">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <!-- NAVBAR - UPDATED -->
+    <nav class="navbar" role="navigation">
+        <div class="nav-container">
+            <div class="logo">
+                <a href="#hero">KEVS ORGANISATION</a>
+            </div>
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="#hero" role="menuitem">Home</a></li>
+                <li role="none"><a href="#about" role="menuitem">About</a></li>
+                <li role="none"><a href="#skills" role="menuitem">Skills</a></li>
+                <li role="none"><a href="#github" role="menuitem">GitHub</a></li>
+                <li role="none"><a href="#projects" role="menuitem">Projects</a></li>
+                <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            </ul>
+            <div class="hamburger" aria-label="Toggle navigation" role="button" tabindex="0">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 🔥 HERO (KEEP YOUR EXISTING) -->
+    <section id="hero" class="hero">
+        <!-- Your existing hero section - PERFECT -->
+        <div class="hero-video-bg">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="videos/hero-bg.mp4" type="video/mp4">
+                <source src="videos/hero-bg.webm" type="video/webm">
+                <div class="video-fallback">
+                    <div class="bg-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                    </div>
+                </div>
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+        <div class="hero-foreground">
+            <div class="bg-grid"></div>
+            <div class="bg-glow"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>HELLO, I'm <span class="accent">Kelvin Maina</span></h1>
+                <p>FULLSTACK Developer & <span class="typing-text"></span></p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn">View Work</a>
+                    <a href="#contact" class="btn-secondary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 🔥 INTERACTIVE ABOUT SECTION -->
+<section id="about" class="about section">
+    <div class="about-container">
+        <!-- Left: Interactive Profile + Stats -->
+        <div class="about-left">
+            <!-- Profile Card - 3D Tilt Effect -->
+            <div class="profile-card" id="profileCard">
+                <div class="profile-image">
+                    <img src="images/project1.jpg" alt="Kelvin Maina" id="profileImg">
+                    <div class="profile-overlay">
+                        <i class="fas fa-play-circle" id="videoPlay"></i>
+                    </div>
+                </div>
+                <div class="profile-info">
+                    <h1>Kelvin <span class="accent">Maina</span></h1>
+                    <h2 class="dynamic-role">FULLSTACK Developer</h2>
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <span class="counter" data-target="50">0</span>+
+                            <span>Projects</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="counter" data-target="100">0</span>+
+                            <span>Clients</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="counter" data-target="2">0</span>
+                            <span>Years</span>
+                        </div>
+                    </div>
+                    <div class="profile-buttons">
+                        <a href="KELVIN MAINA's RESUME.pdf" download class="btn">Download RESUME </a>
+                        <button class="btn-secondary" id="toggleBio">Tell Me More</button>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- Right: Expandable Bio + Timeline -->
+        <div class="about-right">
+            <!-- Expandable Bio -->
+            <div class="bio-panel" id="bioPanel">
+                <div class="bio-content">
+                    <h2>Hey, I'm Kelvin! 👋</h2>
+                    <p>I'm a <strong>passionate FULLSTACK Developer</strong> who loves turning complex problems into simple and interactive experiences.</p>
+                    
+                    <div class="bio-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-bolt"></i>
+                            <div>
+                                <h4>Lightning Fast</h4>
+                                <p>95+ Lighthouse scores on every project</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-mobile-alt"></i>
+                            <div>
+                                <h4>Mobile First</h4>
+                                <p>Perfect responsive design across all devices</p>
+                            </div>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-universal-access"></i>
+                            <div>
+                                <h4>Accessible</h4>
+                                <p>WCAG 2.1 AA compliant - everyone included</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interactive Timeline -->
+                    <div class="timeline">
+                        <div class="timeline-item" data-year="2024">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>FULLSTACK Developer</h4>
+                                <span>TechCorp - Nairobi</span>
+                                <p>Built 15+ production React applications</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item active" data-year="2025">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>Lead Developer</h4>
+                                <span>Current Role</span>
+                                <p>Leading team of 4, optimizing performance by 40%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- 🔥 NEW SKILLS SECTION - DEVELOPERFOLIO STYLE -->
+    <section id="skills" class="skills section">
+        <h2>Tech Stack</h2>
+        <div class="skills-categories">
+            <div class="skill-category">
+                <h3><i class="fas fa-code"></i> FULLSTACK</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">React <span class="skill-level">90%</span></span>
+                    <span class="skill-tag">JavaScript <span class="skill-level">95%</span></span>
+                    <span class="skill-tag">TypeScript <span class="skill-level">85%</span></span>
+                    <span class="skill-tag">Tailwind CSS <span class="skill-level">88%</span></span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-server"></i> Backend</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js <span class="skill-level">80%</span></span>
+                    <span class="skill-tag">Express.js <span class="skill-level">78%</span></span>
+                    <span class="skill-tag">MongoDB <span class="skill-level">75%</span></span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3><i class="fas fa-tools"></i> Tools</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Vercel</span>
+                    <span class="skill-tag">Netlify</span>
+                    <span class="skill-tag">Vite</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 🔥 PRIVATE GITHUB SECTION - NO LIVE FETCHING -->
+<section id="github" class="github section">
+    <h2><i class="fab fa-github"></i> GitHub Stats</h2>
+    <div class="github-stats">
+        <div class="github-card">
+            <div class="private-stats">
+                <i class="fas fa-lock" style="font-size: 4rem; color: var(--accent); margin-bottom: 1rem;"></i>
+                <h3>Private Repositories</h3>
+                <p>📊 50+ Projects<br>⭐ 100+ Stars<br>👥 25+ Contributors</p>
+                <a href="https://github.com/kelvin-maina-cpu/" target="_blank" class="btn" style="margin-top: 1rem;">View Profile</a>
+            </div>
+        </div>
+        <div class="github-card">
+            <div class="top-languages">
+                <h3>Top Languages</h3>
+                <div class="lang-grid">
+                    <div class="lang-item">
+                        <div class="lang-color" style="background: #f03e3e;"></div>
+                        <span>JavaScript<br><strong>45%</strong></span>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-color" style="background: #00d4aa;"></div>
+                        <span>TypeScript<br><strong>25%</strong></span>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-color" style="background: #563d7c;"></div>
+                        <span>React<br><strong>20%</strong></span>
+                    </div>
+                    <div class="lang-item">
+                        <div class="lang-color" style="background: #00d5f7;"></div>
+                        <span>CSS<br><strong>10%</strong></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="github-repos">
+        <h3>Featured Repositories</h3>
+        <div class="repos-grid">
+            <div class="repo-card private-repo">
+                <div class="repo-header">
+                    <i class="fas fa-folder-lock" style="color: var(--accent);"></i>
+                    <div>
+                        <div class="repo-name">ecommerce-dashboard</div>
+                        <span class="repo-lang">React • Tailwind</span>
+                    </div>
+                </div>
+                <p class="repo-description">Advanced analytics dashboard with real-time charts</p>
+                <div class="repo-stats">
+                    <span>⭐ 25</span>
+                    <span>👥 3 contributors</span>
+                </div>
+            </div>
+            <div class="repo-card private-repo">
+                <div class="repo-header">
+                    <i class="fas fa-folder-lock" style="color: var(--accent);"></i>
+                    <div>
+                        <div class="repo-name">task-manager</div>
+                        <span class="repo-lang">React • Node.js</span>
+                    </div>
+                </div>
+                <p class="repo-description">Real-time collaborative task management app</p>
+                <div class="repo-stats">
+                    <span>⭐ 18</span>
+                    <span>🚀 Live Demo</span>
+                </div>
+            </div>
+            <div class="repo-card private-repo">
+                <div class="repo-header">
+                    <i class="fas fa-folder-lock" style="color: var(--accent);"></i>
+                    <div>
+                        <div class="repo-name">portfolio-2026</div>
+                        <span class="repo-lang">HTML • CSS • JS</span>
+                    </div>
+                </div>
+                <p class="repo-description">This portfolio! Glassmorphism + 20+ features</p>
+                <div class="repo-stats">
+                    <span>⭐ 42</span>
+                    <span>📱 Responsive</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- 🔥 PROJECTS (YOUR EXISTING - PERFECT) -->
+    <section id="projects" class="projects section">
+        <!-- Your existing projects section - NO CHANGES -->
+        <h2>Featured Projects</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="tailwind">Tailwind</button>
+            <button class="filter-btn" data-filter="node">Node.js</button>
+        </div>
+        <div class="projects-grid">
+            <article class="project-card" data-tech="react tailwind">
+                <img src="images/download (2).jpeg" alt="E-commerce Dashboard" loading="lazy">
+                <div class="project-content">
+                    <h3>E-commerce Dashboard</h3>
+                    <p>Interactive dashboard for real-time sales analytics. Built with React, Chart.js, and Tailwind CSS.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link live" data-modal="project1">Live Demo</a>
+                        <a href="https://github.com/kelvin-maina-cpu/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card" data-tech="react firebase node">
+                <img src="images/download.jpeg" alt="Task Management App" loading="lazy">
+                <div class="project-content">
+                    <h3>Task Management App</h3>
+                    <p>Collaborative task manager with real-time updates. Powered by React, Firebase, and Node.js.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link live" data-modal="project2">Live Demo</a>
+                        <a href="https://github.com/kelvin-maina-cpu/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </article>
+            <article class="project-card" data-tech="html css js">
+                <img src="images/download (3).jpeg" alt="Personal Portfolio" loading="lazy">
+                <div class="project-content">
+                    <h3>Personal Portfolio</h3>
+                    <p>This very website! Modern glassmorphism design with smooth animations and responsive layout.</p>
+                    <div class="project-links">
+                        <a href="#" class="project-link live" data-modal="project3">Live Demo</a>
+                        <a href="https://github.com/kelvin-maina-cpu/" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 🔥 TESTIMONIALS (YOUR EXISTING) -->
+    <section class="testimonials section">
+        <!-- Your existing testimonials - PERFECT -->
+        <h2>What Clients Say</h2>
+        <div class="testimonial-carousel">
+            <div class="testimonial-slide active">
+                <p>"Kelvin delivered our React dashboard in record time. Pixel-perfect and blazing fast!"</p>
+                <div class="testimonial-author">
+                    <img src="images/Screenshot 2026-02-13 190439.png" alt="Client">
+                    <div>
+                        <h4>Sarah Johnson</h4>
+                        <span>CEO, TechStartup</span>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-slide">
+                <p>"Exceptional work on our e-commerce platform. 5-star developer!"</p>
+                <div class="testimonial-author">
+                    <img src="images/Screenshot 2026-02-13 190558.png" alt="Client">
+                    <div>
+                        <h4>Mike Chen</h4>
+                        <span>CTO, Ecomm Corp</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-nav">
+            <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- 🔥 CONTACT (YOUR EXISTING) -->
+    <section id="contact" class="contact section">
+        <!-- Your existing contact - PERFECT -->
+        <h2>Get In Touch</h2>
+        <form class="contact-form" id="contact-form">
+            <div class="form-group">
+                <input type="text" name="user_name" placeholder="Your Name" required aria-label="Your name">
+            </div>
+            <div class="form-group">
+                <input type="email" name="user_email" placeholder="Your Email" required aria-label="Your email">
+            </div>
+            <div class="form-group">
+                <textarea name="message" rows="5" placeholder="Tell me about your project..." required aria-label="Your message"></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="https://github.com/kelvin-maina-cpu/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/kelvin-maina-a5a239354" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://twitter.com/kelvinmaina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- 🔥 MODALS (YOUR EXISTING) -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal-content" id="modal-content">
+            <button class="modal-close"><i class="fas fa-times"></i></button>
+            <div class="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
