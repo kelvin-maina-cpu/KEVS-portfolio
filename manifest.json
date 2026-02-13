@@ -1,0 +1,11 @@
+{
+  "name": "Kelvin Maina Portfolio",
+  "short_name": "KelvinDev",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00df9a",
+  "icons": [
+    {"src": "images/app-icon-192.png", "sizes": "192x192", "type": "image/png"}
+  ]
+}
