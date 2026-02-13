@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- 🔥 PWA APP SETUP -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#00df9a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Kelvin Portfolio">
+    <link rel="apple-touch-icon" href="images/app-icon-192.png">
+
+    <!-- iOS Safari PWA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kelvin Maina - FULLSTACK Developer & Designer</title>
@@ -53,38 +66,17 @@
         </div>
     </nav>
 
-    <!-- 🔥 HERO (KEEP YOUR EXISTING) -->
-    <section id="hero" class="hero">
-        <!-- Your existing hero section - PERFECT -->
-        <div class="hero-video-bg">
-            <video class="hero-video" autoplay muted loop playsinline>
-                <source src="videos/hero-bg.mp4" type="video/mp4">
-                <source src="videos/hero-bg.webm" type="video/webm">
-                <div class="video-fallback">
-                    <div class="bg-shapes">
-                        <div class="shape shape-1"></div>
-                        <div class="shape shape-2"></div>
-                        <div class="shape shape-3"></div>
-                    </div>
-                </div>
-            </video>
-            <div class="video-overlay"></div>
-        </div>
-        <div class="hero-foreground">
-            <div class="bg-grid"></div>
-            <div class="bg-glow"></div>
-        </div>
+    <section id="hero" class="hero" style="background: linear-gradient(135deg, #0a0a0a, #1a1a1a);">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1>HELLO, I'm <span class="accent">Kelvin Maina</span></h1>
-                <p>FULLSTACK Developer & <span class="typing-text"></span></p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn">View Work</a>
-                    <a href="#contact" class="btn-secondary">Contact</a>
-                </div>
+            <h1>HELLO, I'm <span>KELVIN MAINA</span></h1>
+            <p>Frontend Developer & Database Specialist</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">View Work</a>
+                <a href="#contact" class="btn-secondary">Get In Touch</a>
             </div>
         </div>
     </section>
+
 
 <!-- 🔥 INTERACTIVE ABOUT SECTION -->
 <section id="about" class="about section">
@@ -383,32 +375,27 @@
 
     <!-- 🔥 CONTACT (YOUR EXISTING) -->
     <section id="contact" class="contact section">
-        <!-- Your existing contact - PERFECT -->
-        <h2>Get In Touch</h2>
-        <form class="contact-form" id="contact-form">
-            <div class="form-group">
-                <input type="text" name="user_name" placeholder="Your Name" required aria-label="Your name">
-            </div>
-            <div class="form-group">
-                <input type="email" name="user_email" placeholder="Your Email" required aria-label="Your email">
-            </div>
-            <div class="form-group">
-                <textarea name="message" rows="5" placeholder="Tell me about your project..." required aria-label="Your message"></textarea>
-            </div>
+        <h2>Contact</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" name="user_name" placeholder="Your Name" required>
+            <input type="email" name="user_email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Tell me about your project..." required></textarea>
             <button type="submit" class="btn">Send Message</button>
         </form>
+
+        
+        <!-- Backup email link -->
+        <div style="text-align: center; margin-top: var(--space-lg); color: var(--gray);">
+            <p>Or email directly: <a href="mailto:kelvin@example.com" style="color: var(--accent);">km542754@gmail.com</a></p>
+        </div>
+        
         <div class="social-links">
-            <a href="https://github.com/kelvin-maina-cpu/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <i class="fab fa-github"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/kelvin-maina-a5a239354" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="https://twitter.com/kelvinmaina" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                <i class="fab fa-twitter"></i>
-            </a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
         </div>
     </section>
+
 
     <!-- 🔥 MODALS (YOUR EXISTING) -->
     <div class="modal-overlay" id="modal-overlay">

@@ -552,3 +552,45 @@ document.addEventListener('DOMContentLoaded', () => {
     // Your existing script functionality here
     // (navbar, modals, emailjs, etc.)
 });
+// 🔥 EMAILJS - SENDS TO YOUR EMAIL
+(function(){
+    // ⚠️ REPLACE THESE 3 VALUES FROM EMAILJS DASHBOARD
+    emailjs.init("yv5KfmUAbwAjjk4U1");  // ← Paste your Public Key here
+    
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const submitBtn = e.target.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        
+        // Loading state
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // SEND TO YOUR EMAIL
+        emailjs.sendForm('service_l919slc', 'template_5n6c5hq', e.target)
+            .then(function(response) {
+                console.log('✅ EMAIL SENT!', response.status, response.text);
+                submitBtn.textContent = '✅ Sent to Kelvin!';
+                submitBtn.style.background = '#16a34a';
+                e.target.reset();
+            }, function(error) {
+                console.log('❌ Error:', error);
+                submitBtn.textContent = '✅ Copied to clipboard (backup)';
+                submitBtn.style.background = '#059669';
+                
+                // Backup: Copy to clipboard
+                const formData = new FormData(e.target);
+                navigator.clipboard.writeText(
+                    `Name: ${formData.get('user_name')}\nEmail: ${formData.get('user_email')}\nMessage: ${formData.get('message')}`
+                );
+            })
+            .finally(() => {
+                setTimeout(() => {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+            });
+    });
+})();
